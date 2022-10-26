@@ -1,0 +1,89 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: rgb(21, 187, 151);
+}
+.container{
+    border: 4px solid red;
+    width: 100vw;
+}
+
+.heart{
+    height: 210px;
+    width: 210px;
+    background: #f20044;
+    position: relative;
+    top: 180px;
+    left: 0;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 1s linear infinite;
+}
+
+@keyframes heart{
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.heart:before{
+    content: '';
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 150px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart:after{
+    content: '';
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 150px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.text{
+    font-size: 65px;
+    font-family: cursive;
+    text-align: center;
+    position: relative;
+    top: 35px;
+    color: #f20044;
+    text-shadow: 10px -10px 25px;
+}
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 237px;
+    height: 25px;
+}
+span{
+    font-family: monospace;
+    color: white;
+    font-size: 15px;
+}
+.heartbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
